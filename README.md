@@ -1,8 +1,57 @@
 # Neovim Lua Config
 
+Non-CoC neovim IDE. General set and remaps are in `lua/pb1337` and
+modifications or additional mappings for plugins in `after/plugin`.
+
+Use `<leader>c` to open up the cheat sheet for list of current mappings.
+
+## Packages
+ - LuaSnip
+ - cmp-nvim-lsp
+ - harpoon
+ - jellybeans
+ - lsp-zero.nvim
+ - mason-lspconfig.nvim
+ - mason.nvim
+ - nerdtree
+ - nerdtree-git-plugin
+ - nvim-cmp
+ - nvim-lspconfig
+ - nvim-treesitter
+ - nvim-web-devicons
+ - packer.nvim
+ - playground
+ - plenary.nvim
+ - telescope.nvim
+ - trouble.nvim
+ - undotree
+ - vim-commentary
+ - vim-eunuch
+ - vim-fugitive
+ - vim-gitgutter
+ - vim-repeat
+ - vim-surround
+
+## Install
+
+- install [nvim v0.9.0+](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+- clone to `~/.config/`
+- `mv lua-nvim nvim` (should now have the path `~/.config/nvim`)
+- download [packer](https://github.com/wbthomason/packer.nvim):
+
+Unix, Linux install for Packer:
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+- `nvim ~/.config/nvim/lua/pb1337/packer.lua`
+- `:PackerSync` (re-run if there are any errors)
+- `qa` and should be good to go
+
 ## Lua Scripts
 
-- FixColors|  |lua FixColors() -- remove bg from NormalFloat windows
+- FixColors: lua FixColors() -- remove bg from NormalFloat windows
 
 ## Remaps
 
@@ -21,8 +70,8 @@
 | description | command |
 |-------------|---------|
 |use buffer formatter|`<leader>f`|
-|yank to "+y register|`<leader>y (system register)`|
-|yank to "+Y register|`<leader>Y (system register)`|
+|yank to "+y system register|`<leader>y`|
+|yank to "+Y  systemregister|`<leader>Y`|
 |persist register copy|`<leader>p`|
 |persist register del|`<leader>d`|
 |open vertical split|`<leader>v`|
@@ -31,7 +80,7 @@
 |make file executable|`<leader>x`|
 |source current file|`<leader><leader>`|
 
-## Plugins
+## Package Keybinds
 
 ### harpoon
 
