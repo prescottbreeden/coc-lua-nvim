@@ -7,10 +7,10 @@
 ## --[ Remaps ]------------
 
 - alternate esc:          jk
-- switch window:          <\C-{h,j,k,l}\>
-- resize window:          <\C-{left, right, up, down}\>
-- equalize window sizes:  <\C-w\><C-w\>
-- clear search highlight: <\C-n\>
+- switch window:          \<C-{h,j,k,l}\>
+- resize window:          \<C-{left, right, up, down}\>
+- equalize window sizes:  \<C-w\>\<C-w\>
+- clear search highlight: \<C-n\>
 - move VB line up:        J
 - move VB line down:      K
 
@@ -39,7 +39,7 @@
 
 - find files:     \<leader\>pf
 - buffers:        \<leader\>pb
-- git files:      <C-p>
+- git files:      \<C-p\>
 - grep project:   \<leader\>ps
 - fuzzy find:     \<leader\>ff
 - git commits:    :Telescope git_commits
@@ -51,7 +51,7 @@
 
 ### trouble
 
-- close trouble:            q or <esc>
+- close trouble:            q or \<esc\>
 - toggle trouble:           \<leader\>xx
 - workspace diagnostics:    \<leader\>xw
 - document diagnostics:     \<leader\>xw
