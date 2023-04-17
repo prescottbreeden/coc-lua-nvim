@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 -- Normal Mode
 vim.keymap.set("n", "Q", "<nop>") -- don't ever press Q, it's the worst place in the universe
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format) -- format stuff
+vim.keymap.set({"n", "v"}, "<leader>pp", vim.lsp.buf.format) -- use lsp to format
 vim.keymap.set("n", "<C-n>", ":noh<cr>") -- clear search highlights
 vim.keymap.set("n", "J", "mzJ`z") -- J with cursor in place (prevent col jump)
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- keep cursor in middle when jumping down

@@ -105,6 +105,8 @@ return require('packer').startup(function(use)
   use { 'mbbill/undotree' } -- manipulate undo stack directly
   use { 'airblade/vim-gitgutter' } -- add git line change info
   use { 'nvim-tree/nvim-web-devicons' } -- make pretty dev icons
+  use { 'vim-airline/vim-airline' }
+  use { 'vim-airline/vim-airline-themes' }
 
   -- pope essentials
   use { 'tpope/vim-fugitive' } -- git

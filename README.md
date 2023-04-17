@@ -69,7 +69,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 | description | command |
 |-------------|---------|
-|use buffer formatter|`<leader>f`|
 |yank to "+y system register|`<leader>y`|
 |yank to "+Y  systemregister|`<leader>Y`|
 |persist register copy|`<leader>p`|
