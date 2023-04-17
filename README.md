@@ -70,7 +70,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 | description | command |
 |-------------|---------|
 |yank to "+y system register|`<leader>y`|
-|yank to "+Y  systemregister|`<leader>Y`|
+|yank to "+Y  system register|`<leader>Y`|
 |persist register copy|`<leader>p`|
 |persist register del|`<leader>d`|
 |open vertical split|`<leader>v`|
@@ -122,5 +122,5 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 | description | command |
 |-------------|---------|
-|open undotree|<leader>u|
+|open undotree|`<leader>u`|
 
