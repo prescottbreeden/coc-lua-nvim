@@ -93,11 +93,11 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 | description | command |
 |-------------|---------|
-|git files|`<C-p>`|
-|find files|`<leader>pf`|
-|buffers|`<leader>pb`|
-|grep project|`<leader>ps`|
-|fuzzy find|`<leader>ff`|
+|search files under git control|`<C-p>`|
+|search all file names|`<leader>ff`|
+|search all buffers|`<leader>fb`|
+|dual grep all files|`<leader>fg`|
+|fuzzy find current buffer|`<leader>,ff`|
 
 ### nerdtree
 
