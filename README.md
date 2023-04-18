@@ -35,8 +35,8 @@ Use `<leader>c` to open up the cheat sheet for list of current mappings.
 ## Install
 
 - install [nvim v0.9.0+](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-- clone to `~/.config/`
-- `mv lua-nvim nvim` (should now have the path `~/.config/nvim`)
+- clone and move to config `~/.config/lua-nvim`
+- rename to `nvim` (should now have the path `~/.config/nvim`)
 - download [packer](https://github.com/wbthomason/packer.nvim):
 
 Unix, Linux install for Packer:
@@ -46,8 +46,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 
 - `nvim ~/.config/nvim/lua/pb1337/packer.lua`
+- `:so` give the file a quick shout out to source it
 - `:PackerSync` (re-run if there are any errors)
-- `qa` and should be good to go
+- `:qa` and should be good to go
 
 ## Lua Scripts
 
