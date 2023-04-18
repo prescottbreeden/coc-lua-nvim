@@ -94,6 +94,7 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline' -- additional file/branch info than default
   use 'vim-airline/vim-airline-themes' -- pre-configured themes for airline
   use "lukas-reineke/virt-column.nvim" -- uses virtual text in place of hi
+  use "wesQ3/vim-windowswap" -- allows for directional window swapping
 
   -- pope essentials
   use 'tpope/vim-fugitive' -- git powa

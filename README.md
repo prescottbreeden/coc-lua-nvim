@@ -5,32 +5,40 @@ modifications or additional mappings for plugins in `after/plugin`.
 
 Use `<leader>c` to open up the cheat sheet for list of current mappings.
 
-## Packages
- - LuaSnip
- - cmp-nvim-lsp
- - harpoon
- - jellybeans
- - lsp-zero.nvim
- - mason-lspconfig.nvim
- - mason.nvim
- - nerdtree
- - nerdtree-git-plugin
- - nvim-cmp
- - nvim-lspconfig
- - nvim-treesitter
- - nvim-web-devicons
- - packer.nvim
- - playground
- - plenary.nvim
- - telescope.nvim
- - trouble.nvim
- - undotree
- - vim-commentary
- - vim-eunuch
- - vim-fugitive
- - vim-gitgutter
- - vim-repeat
- - vim-surround
+```
+                packer.nvim - Total plugins: 30
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ • LuaSnip
+ • cmp-nvim-lsp
+ • harpoon
+ • jellybeans
+ • lsp-zero.nvim
+ • mason-lspconfig.nvim
+ • mason.nvim
+ • nerdtree
+ • nerdtree-git-plugin
+ • nvim-cmp
+ • nvim-lspconfig
+ • nvim-treesitter
+ • nvim-web-devicons
+ • packer.nvim
+ • playground
+ • plenary.nvim
+ • rust.vim
+ • telescope.nvim
+ • trouble.nvim
+ • undotree
+ • vim-airline
+ • vim-airline-themes
+ • vim-commentary
+ • vim-eunuch
+ • vim-fugitive
+ • vim-gitgutter
+ • vim-repeat
+ • vim-surround
+ • vim-windowswap
+ • virt-column.nvim
+```
 
 ## Install
 
@@ -116,9 +124,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 |toggle trouble|`<leader>xx`|
 |workspace diagnostics|`<leader>xw`|
 |document diagnostics|`<leader>xw`|
-|local list|`<leader>xl`|
 |trouble quickfix|`<leader>xq`|
-|lsp references|`<leader>gR`|
+|local list|`<leader>xl`|
+|lsp references|`gR`|
 
 ### undotree
 

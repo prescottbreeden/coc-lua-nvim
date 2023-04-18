@@ -3,7 +3,8 @@
 " ========================
 
 " --[ Lua Scripts ]-------
-" - FixColors:  :lua FixColors() -- remove bg from NormalFloat windows
+" - FixColorColumn: `:lua FixColorColumn()` -- repaint colorcolumn for filetype
+" - FixColors:  `:lua FixColors()` -- remove bg from NormalFloat windows
 
 " --[ Remaps ]------------
 " alternate esc:          jk
@@ -15,7 +16,7 @@
 " move VB line down:      K
 
 " --[ Leader ]------------
-" use buffer formatter:   <leader>f
+" use buffer formatter:   <leader>pf
 " yank to "+y register:   <leader>y (system register)
 " yank to "+Y register:   <leader>Y (system register)
 " persist register copy:  <leader>p
@@ -33,11 +34,11 @@
 " - select:         <leader>{j,k,l,;}
 
 " telescope
-" - find files:     <leader>pf
-" - buffers:        <leader>pb
+" - find files:     <leader>ff
+" - buffers:        <leader>fb
 " - git files:      <C-p>
-" - grep project:   <leader>ps
-" - fuzzy find:     <leader>ff
+" - grep project:   <leader>fg
+" - fuzzy find:     <leader>,ff
 " - git commits:    :Telescope git_commits
 
 " nerdtree
@@ -48,13 +49,16 @@
 " - close trouble:            q or <esc>
 " - toggle trouble:           <leader>xx
 " - workspace diagnostics:    <leader>xw
-" - document diagnostics:     <leader>xw
-" - local list:               <leader>xl
+" - document diagnostics:     <leader>xd
 " - trouble quickfix:         <leader>xq
-" - lsp references:           <leader>gR
+" - local list:               <leader>xl
+" - lsp references:           gR
 
 " undotree
 " - open undotree:  <leader>u
+
+" window-swap
+" - swap window in direction: <A-{h, j, k, l}>
 
 " --[ Spell ]-----------
 " spell check
