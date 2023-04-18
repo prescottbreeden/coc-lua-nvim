@@ -51,7 +51,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## Lua Scripts
 
-- FixColors: lua FixColors() -- remove bg from NormalFloat windows
+- FixColors: `:lua FixColors()` -- remove bg from NormalFloat windows
+- FixColorColumn: `:lua FixColorColumn()` -- repaint color column for filetype
 
 ## Remaps
 

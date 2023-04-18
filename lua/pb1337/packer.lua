@@ -7,37 +7,25 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- Packer can manage itself
 
   -- color theme
-  use { 
-    'nanotech/jellybeans.vim',
-    as = 'jellybeans',
-    config = function()
-      vim.cmd('colorscheme jellybeans')
-    end
-  }
+  use { 'nanotech/jellybeans.vim', as = 'jellybeans' }
 
   -- tree sitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    { run = ':TSUpdate' }
-  }
-  use { 'nvim-treesitter/playground' } -- reveal current AST in buffer
+  use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
+  use 'nvim-treesitter/playground' -- reveal current AST in buffer
 
   -- lsp
-  use {'neovim/nvim-lspconfig'}
-  use {
-    "williamboman/mason.nvim",
-    run = ":MasonUpdate"
-  }
-  use {'williamboman/mason-lspconfig.nvim'}
-  use {'hrsh7th/nvim-cmp'}
-  use {'hrsh7th/cmp-nvim-lsp'}
-  use {'L3MON4D3/LuaSnip'}
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-  }
+  use { "williamboman/mason.nvim", run = ":MasonUpdate" }
+  use { 'VonHeikemen/lsp-zero.nvim', branch = 'v2.x', }
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
 
-  -- trouble error debugging
+  -- language specific
+  use 'rust-lang/rust.vim'
+
+  -- error debugging
   use {
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
@@ -53,8 +41,6 @@ return require('packer').startup(function(use)
         group = true, -- group results by file
         padding = true, -- add an extra new line on top of the list
         action_keys = { -- key mappings for actions in the trouble list
-          -- map to {} to remove a mapping, for example:
-          -- close = {},
           close = "q", -- close the list
           cancel = "<esc>", -- cancel the preview and get back to your last window / buffer / cursor
           refresh = "r", -- manually refresh
@@ -93,26 +79,27 @@ return require('packer').startup(function(use)
   }
 
   -- file search/grep
-  use { 'scrooloose/nerdtree' }
-  use { 'Xuyuanp/nerdtree-git-plugin' }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'scrooloose/nerdtree'
+  use 'Xuyuanp/nerdtree-git-plugin'
 
   -- other goodies
-  use { 'theprimeagen/harpoon' } -- quick file hopping
-  use { 'mbbill/undotree' } -- manipulate undo stack directly
-  use { 'airblade/vim-gitgutter' } -- add git line change info
-  use { 'nvim-tree/nvim-web-devicons' } -- make pretty dev icons
-  use { 'vim-airline/vim-airline' }
-  use { 'vim-airline/vim-airline-themes' }
+  use 'theprimeagen/harpoon' -- quick file hopping
+  use 'mbbill/undotree' -- manipulate undo stack directly
+  use 'airblade/vim-gitgutter' -- add git line change info
+  use 'nvim-tree/nvim-web-devicons' -- make pretty dev icons
+  use 'vim-airline/vim-airline' -- additional file/branch info than default
+  use 'vim-airline/vim-airline-themes' -- pre-configured themes for airline
+  use "lukas-reineke/virt-column.nvim" -- uses virtual text in place of hi
 
   -- pope essentials
-  use { 'tpope/vim-fugitive' } -- git
-  use { 'tpope/vim-commentary' } -- quick line commenting
-  use { 'tpope/vim-surround' } -- change/delete/wrap motion with text/chars
-  use { 'tpope/vim-repeat' } -- repeat a plugin map
-  use { 'tpope/vim-eunuch' } -- vim sugar for UNIX shell commands
+  use 'tpope/vim-fugitive' -- git powa
+  use 'tpope/vim-commentary' -- quick line commenting with `gc + motion`
+  use 'tpope/vim-surround' -- change/delete/wrap motion with text/chars
+  use 'tpope/vim-repeat' -- repeat a plugin map
+  use 'tpope/vim-eunuch' -- vim sugar for UNIX shell commands
 
 end)
