@@ -10,12 +10,11 @@ vim.keymap.set("n", "n", "nzzzv") -- keep cursor in middle when moving forwards 
 vim.keymap.set("n", "N", "Nzzzv") -- keep cursor in middle when moving backwards through search results
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- live search replace on current word
 vim.keymap.set("n", "<leader>c", ":nos botright 40vs ~/.config/nvim/cheats.vim<cr>") -- open cheat sheet
-vim.keymap.set("n", "<leader>v", ":vs<cr>") -- create vertical split
-vim.keymap.set("n", "<leader>i", ":sp<cr>") -- create horizontal split (mirror nerdtree)
+vim.keymap.set("n", "<leader>vs", ":vs<cr>") -- create vertical split
+vim.keymap.set("n", "<leader>sp", ":sp<cr>") -- create horizontal split (mirror nerdtree)
 vim.keymap.set("n", "<C-w><C-w>", "<C-w>=") -- equalize window split sizes
 
 -- file vim-fu
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }) -- make current file executable
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end) -- source current file
@@ -48,5 +47,5 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- terminal-fu
-vim.keymap.set({"n", "v"}, "<leader>t", ":15sp +te<cr>") -- open terminal split
+vim.keymap.set("n", "<leader>t", ":15sp +te<cr>") -- open terminal split
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>") -- return to normal mode

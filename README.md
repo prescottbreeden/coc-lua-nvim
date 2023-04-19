@@ -63,35 +63,46 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - FixColors: `:lua FixColors()` -- remove bg from NormalFloat windows
 - FixColorColumn: `:lua FixColorColumn()` -- repaint color column for filetype
 
-## Remaps
+## Remaps & Funsies
 
-| description | command |
-|-------------|---------|
-|alternate esc|`jk`|
-|switch window|`<C-{h,j,k,l}>`|
-|resize window|`<C-{left, right, up, down}>`|
-|equalize window sizes| `<C-w><C-w>`|
-|clear search highlight|`<C-n>`|
-|move VB line up|`J`|
-|move VB line down|`K`|
+Leader key: `<spacebar>`
 
-## Leader
-
-| description | command |
-|-------------|---------|
-|yank to "+y system register|`<leader>y`|
-|yank to "+Y  system register|`<leader>Y`|
-|persist register copy|`<leader>p`|
-|persist register del|`<leader>d`|
-|open vertical split|`<leader>v`|
-|open horizontal split|`<leader>i`|
-|open terminal in buff|`<leader>t`|
-|make file executable|`<leader>x`|
-|source current file|`<leader><leader>`|
+| mode | description | command |
+|------|-------------|---------|
+|normal|nav to window|`<C-{h,j,k,l}>`|
+|normal|resize window|`<C-{left, right, up, down}>`|
+|normal|normalize windows| `<C-w><C-w>`|
+|normal|clear search highlight|`<C-n>`|
+|visual|move VB line up|`J`|
+|visual|move VB line down|`K`|
+|normal|yank to "+y system register|`<leader>y`|
+|normal|yank to "+Y  system register|`<leader>Y`|
+|normal|persist register on copy|`<leader>p`|
+|normal|persist register on del|`<leader>d`|
+|normal|vertical split|`<leader>vs`|
+|normal|horizontal split|`<leader>sp`|
+|normal|open terminal|`<leader>t`|
+|normal|source buffer|`<leader><leader>`|
+|insert|alternate esc|`jk`|
 
 ## Package Keybinds
 
-### harpoon
+### LSP
+
+| mode | description | command |
+|------|-------------|---------|
+|normal| goto definition | `gd` |
+|normal| trigger hover | `K` |
+|normal| workspace symbol | `<leader>vws` |
+|normal| open diagnostic float | `<leader>vd` |
+|normal| next diagnostic | `[d` |
+|normal| prev diagnostic | `]d` |
+|normal| open code actions | `<leader>vca` |
+|normal| find references | `<leader>vrr` |
+|normal| rename all | `<leader>vrn` |
+|insert| show signature | `<C-h>` |
+
+### Harpoon
 
 | description | command |
 |-------------|---------|
@@ -99,7 +110,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 |add|`<leader>a`|
 |select|`<leader>{j,k,l,;}`|
 
-### telescope
+### Telescope
 
 | description | command |
 |-------------|---------|
@@ -109,28 +120,30 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 |dual grep all files|`<leader>fg`|
 |fuzzy find current buffer|`<leader>,ff`|
 
-### nerdtree
+### Nerdtree
 
 | description | command |
 |-------------|---------|
 |toggle tree|`<leader>,k`|
 |goto current|`<leader>,m`|
 
-### trouble
+### Trouble
 
 | description | command |
 |-------------|---------|
 |close trouble|`q or <esc>`|
 |toggle trouble|`<leader>xx`|
-|workspace diagnostics|`<leader>xw`|
-|document diagnostics|`<leader>xw`|
+|document diagnostics|`<leader>xd`|
 |trouble quickfix|`<leader>xq`|
-|local list|`<leader>xl`|
-|lsp references|`gR`|
 
-### undotree
+### Undotree
 
 | description | command |
 |-------------|---------|
 |open undotree|`<leader>u`|
 
+### Window-swap
+
+| description | command |
+|-------------|---------|
+|swap window in direction|`<A-{h, j, k, l}>`|
