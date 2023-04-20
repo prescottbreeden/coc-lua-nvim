@@ -45,6 +45,7 @@
 " telescope
 " - find files:     <leader>ff
 " - buffers:        <leader>fb
+" - delete buffer:  <C-x>
 " - git files:      <C-p>
 " - grep project:   <leader>fg
 " - fuzzy find:     <leader>,ff

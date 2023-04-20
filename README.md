@@ -6,7 +6,7 @@ modifications or additional mappings for plugins in `after/plugin`.
 Use `<leader>c` to open up the cheat sheet for list of current mappings.
 
 ```
-                packer.nvim - Total plugins: 30
+                packer.nvim - Total plugins: 31
  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  • LuaSnip
  • cmp-nvim-lsp
@@ -28,6 +28,7 @@ Use `<leader>c` to open up the cheat sheet for list of current mappings.
  • telescope.nvim
  • trouble.nvim
  • undotree
+ • vim-ai
  • vim-airline
  • vim-airline-themes
  • vim-commentary
@@ -85,7 +86,9 @@ Leader key: `<spacebar>`
 |normal|source buffer|`<leader><leader>`|
 |insert|alternate esc|`jk`|
 
-## Package Keybinds
+---
+
+## Packages
 
 ### LSP
 
@@ -93,14 +96,14 @@ Leader key: `<spacebar>`
 |------|-------------|---------|
 |normal| goto definition | `gd` |
 |normal| trigger hover | `K` |
-|normal| workspace symbol | `<leader>vws` |
-|normal| open diagnostic float | `<leader>vd` |
-|normal| next diagnostic | `[d` |
-|normal| prev diagnostic | `]d` |
 |normal| open code actions | `<leader>vca` |
 |normal| find references | `<leader>vrr` |
 |normal| rename all | `<leader>vrn` |
 |insert| show signature | `<C-h>` |
+|normal| open diagnostic float | `<leader>vd` |
+|normal| next diagnostic | `[d` |
+|normal| prev diagnostic | `]d` |
+|normal| workspace symbol | `<leader>vws` |
 
 ### Harpoon
 
@@ -147,3 +150,11 @@ Leader key: `<spacebar>`
 | description | command |
 |-------------|---------|
 |swap window in direction|`<A-{h, j, k, l}>`|
+
+### OpenAI Chat
+
+| description | command |
+|-------------|---------|
+|open chat|`<leader>ai`|
+|send question|`<leader>ai`|
+

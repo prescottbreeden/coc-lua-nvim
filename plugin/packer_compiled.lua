@@ -165,7 +165,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    config = { "\27LJ\2\n�\5\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\nsigns\1\0\5\nother\b﫠\nerror\b\fwarning\b\thint\b\16information\b\14auto_jump\1\2\0\0\20lsp_definitions\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\3\0\0\t<cr>\n<tab>\1\0\t\rprevious\6k\nhover\6K\tnext\6j\16toggle_mode\6m\vcancel\n<esc>\fpreview\6p\19toggle_preview\6P\nclose\6q\frefresh\6r\1\0\15\16fold_closed\b\fpadding\2\15auto_close\1\nicons\2\14auto_fold\1\17indent_lines\2\tmode\26workspace_diagnostics\rposition\vbottom\14fold_open\b\14auto_open\1\ngroup\2\17auto_preview\2\nwidth\0032\vheight\3\n\25use_diagnostic_signs\1\nsetup\ftrouble\frequire\0" },
+    config = { "\27LJ\2\n�\5\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\nsigns\1\0\5\16information\b\thint\b\nother\b﫠\nerror\b\fwarning\b\14auto_jump\1\2\0\0\20lsp_definitions\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\3\0\0\t<cr>\n<tab>\1\0\t\16toggle_mode\6m\nclose\6q\nhover\6K\vcancel\n<esc>\tnext\6j\19toggle_preview\6P\rprevious\6k\frefresh\6r\fpreview\6p\1\0\15\ngroup\2\25use_diagnostic_signs\1\nicons\2\14fold_open\b\14auto_open\1\17auto_preview\2\tmode\26workspace_diagnostics\17indent_lines\2\fpadding\2\14auto_fold\1\16fold_closed\b\15auto_close\1\nwidth\0032\vheight\3\n\rposition\vbottom\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/home/pb1337/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
@@ -174,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/pb1337/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-ai"] = {
+    loaded = true,
+    path = "/home/pb1337/.local/share/nvim/site/pack/packer/start/vim-ai",
+    url = "https://github.com/madox2/vim-ai"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -230,7 +235,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n�\5\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\nsigns\1\0\5\nother\b﫠\nerror\b\fwarning\b\thint\b\16information\b\14auto_jump\1\2\0\0\20lsp_definitions\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\3\0\0\t<cr>\n<tab>\1\0\t\rprevious\6k\nhover\6K\tnext\6j\16toggle_mode\6m\vcancel\n<esc>\fpreview\6p\19toggle_preview\6P\nclose\6q\frefresh\6r\1\0\15\16fold_closed\b\fpadding\2\15auto_close\1\nicons\2\14auto_fold\1\17indent_lines\2\tmode\26workspace_diagnostics\rposition\vbottom\14fold_open\b\14auto_open\1\ngroup\2\17auto_preview\2\nwidth\0032\vheight\3\n\25use_diagnostic_signs\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+try_loadstring("\27LJ\2\n�\5\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0005\4\5\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\0035\4\v\0=\4\f\0035\4\r\0=\4\14\0035\4\15\0=\4\16\0035\4\17\0=\4\18\0035\4\19\0=\4\20\3=\3\21\0025\3\22\0=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\nsigns\1\0\5\16information\b\thint\b\nother\b﫠\nerror\b\fwarning\b\14auto_jump\1\2\0\0\20lsp_definitions\16action_keys\16toggle_fold\1\3\0\0\azA\aza\15open_folds\1\3\0\0\azR\azr\16close_folds\1\3\0\0\azM\azm\15jump_close\1\2\0\0\6o\ropen_tab\1\2\0\0\n<c-t>\16open_vsplit\1\2\0\0\n<c-v>\15open_split\1\2\0\0\n<c-x>\tjump\1\3\0\0\t<cr>\n<tab>\1\0\t\16toggle_mode\6m\nclose\6q\nhover\6K\vcancel\n<esc>\tnext\6j\19toggle_preview\6P\rprevious\6k\frefresh\6r\fpreview\6p\1\0\15\ngroup\2\25use_diagnostic_signs\1\nicons\2\14fold_open\b\14auto_open\1\17auto_preview\2\tmode\26workspace_diagnostics\17indent_lines\2\fpadding\2\14auto_fold\1\16fold_closed\b\15auto_close\1\nwidth\0032\vheight\3\n\rposition\vbottom\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
