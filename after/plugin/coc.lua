@@ -1,5 +1,4 @@
 ---@diagnostic disable: undefined-global
----@diagnostic disable: redefined-local
 
 -- Autocomplete
 function _G.check_back_space()
@@ -56,37 +55,44 @@ keyset("n", "gy", "<Plug>(coc-type-definition)", { silent = true })
 keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
 keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
 keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true, noremap = true })
-keyset("n", "<leader>rn", "<Plug>(coc-rename)", {})
+keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
 
-local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 -- suggestion window
-keyset("i", "<C-space>", "coc#refresh()", { silent = true, noremap = true, expr = true, replace_keycodes = false })
-keyset("i", "<tab>", "coc#pum#visible() ? coc#pum#next(1) : '<TAB>'", { silent = true, noremap = true, expr = true, replace_keycodes = false })
-keyset("i", "<S-tab>", "coc#pum#visible() ? coc#pum#prev(1) : '<C-h>'", { silent = true, noremap = true, expr = true, replace_keycodes = false })
-keyset("i", "<cr>", "coc#pum#visible() ? coc#pum#confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", opts)
+local suggestion_options = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+keyset("i", "<C-space>", "coc#refresh()", suggestion_options)
+keyset("i", "<tab>", "coc#pum#visible() ? coc#pum#next(1) : '<TAB>'", suggestion_options)
+keyset("i", "<S-tab>", "coc#pum#visible() ? coc#pum#prev(1) : '<C-h>'", suggestion_options)
+keyset("i", "<cr>", "coc#pum#visible() ? coc#pum#confirm() : '<C-G>u<CR><C-R>=coc#on_enter()<CR>'", suggestion_options)
 
--- codeaction
-keyset("n", "<leader>.", "<Plug>(coc-codeaction)", { silent = true, nowait = true })
+-- code actions
+local code_action_options = { silent = true, nowait = true }
+keyset({ "n", "x", "v" }, "<leader>a", "<Plug>(coc-codeaction-selected)", code_action_options)
+keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", code_action_options) -- code actions at the cursor position.
+keyset("n", "<leader>aG", "<Plug>(coc-codeaction-source)", code_action_options) -- code actions affect whole buffer.
+keyset("n", "<leader>ag", "<Plug>(coc-codeaction)", code_action_options)        -- codeActions to the current buffer
+keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", code_action_options)       -- quickfix action on the current line.
 keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
 keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 -- formatting
-keyset("n", "<leader>pf", ":CocCommand prettier.formatFile<CR>", opts)
-keyset({ "v", "x" }, "<leader>pf", "<Plug>(coc-format-selected)", opts)
+keyset("n", "<leader>pf", ":CocCommand prettier.formatFile<CR>", { silent = true, noremap = true })
+keyset({ "v", "x" }, "<leader>pf", "<Plug>(coc-format-selected)", { silent = true })
 
+-- snippets (does this even work?)
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)") -- Use <c-j> to trigger snippets
 
 -- diagnostics
--- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", opts)
-keyset("n", "]g", "<Plug>(coc-diagnostic-next)", opts)
+local diagnostic_options = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+keyset("n", "<leader>x", ":CocDiagnostics<cr>", {})
+keyset("n", "[g", "<Plug>(coc-diagnostic-prev)", diagnostic_options)
+keyset("n", "]g", "<Plug>(coc-diagnostic-next)", diagnostic_options)
 
 -- Remap <C-f> and <C-b> to scroll float windows/popups
-local opts = { silent = true, nowait = true, expr = true }
-keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
-keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
-keyset("i", "<C-f>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
-keyset("i", "<C-b>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
-keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
-keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
+local float_options = { silent = true, nowait = true, expr = true }
+keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', float_options)
+keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', float_options)
+keyset("i", "<C-f>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', float_options)
+keyset("i", "<C-b>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', float_options)
+keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', float_options)
+keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', float_options)
