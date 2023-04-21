@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 function FixColors(color)
 	color = color or "jellybeans"
 	vim.cmd.colorscheme(color)

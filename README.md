@@ -6,19 +6,14 @@ modifications or additional mappings for plugins in `after/plugin`.
 Use `<leader>c` to open up the cheat sheet for list of current mappings.
 
 ```
-                packer.nvim - Total plugins: 31
- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- • LuaSnip
- • cmp-nvim-lsp
+  packer.nvim - Total plugins: 25
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ • coc.nvim
+ • friendly-snippets
  • harpoon
  • jellybeans
- • lsp-zero.nvim
- • mason-lspconfig.nvim
- • mason.nvim
  • nerdtree
  • nerdtree-git-plugin
- • nvim-cmp
- • nvim-lspconfig
  • nvim-treesitter
  • nvim-web-devicons
  • packer.nvim
@@ -26,7 +21,6 @@ Use `<leader>c` to open up the cheat sheet for list of current mappings.
  • plenary.nvim
  • rust.vim
  • telescope.nvim
- • trouble.nvim
  • undotree
  • vim-ai
  • vim-airline
@@ -61,7 +55,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## Lua Scripts
 
-- FixColors: `:lua FixColors()` -- remove bg from NormalFloat windows
+- FixColors: `:lua FixColors()` -- remove bg from float windows
 - FixColorColumn: `:lua FixColorColumn()` -- repaint color column for filetype
 
 ## Remaps & Funsies
@@ -76,12 +70,6 @@ Leader key: `<spacebar>`
 |normal|clear search highlight|`<C-n>`|
 |visual|move VB line up|`J`|
 |visual|move VB line down|`K`|
-|normal|yank to "+y system register|`<leader>y`|
-|normal|yank to "+Y  system register|`<leader>Y`|
-|normal|persist register on copy|`<leader>p`|
-|normal|persist register on del|`<leader>d`|
-|normal|vertical split|`<leader>vs`|
-|normal|horizontal split|`<leader>sp`|
 |normal|open terminal|`<leader>t`|
 |normal|source buffer|`<leader><leader>`|
 |insert|alternate esc|`jk`|
@@ -90,7 +78,7 @@ Leader key: `<spacebar>`
 
 ## Packages
 
-### LSP
+### CoC
 
 | mode | description | command |
 |------|-------------|---------|
@@ -129,15 +117,6 @@ Leader key: `<spacebar>`
 |-------------|---------|
 |toggle tree|`<leader>,k`|
 |goto current|`<leader>,m`|
-
-### Trouble
-
-| description | command |
-|-------------|---------|
-|close trouble|`q or <esc>`|
-|toggle trouble|`<leader>xx`|
-|document diagnostics|`<leader>xd`|
-|trouble quickfix|`<leader>xq`|
 
 ### Undotree
 

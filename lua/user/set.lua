@@ -1,9 +1,9 @@
+---@diagnostic disable: undefined-global
 -- globals
-vim.g.mapleader = " "
 vim.g.nobackup = true -- some servers have issues with backup files
 vim.g.nowritebackip = true -- some servers have issues with backup files
 vim.g.hidden = true -- allow unsaved work in unseen buffer
-    
+
 -- options
 vim.opt.cmdheight = 2 -- more space for display messages
 vim.opt.splitbelow = true -- flip the split preference
@@ -41,7 +41,6 @@ vim.opt.smartcase = true
 -- set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 -- set foldmethod=indent
 -- set foldnestmax=10
--- set hidden
 -- set history=1000       " Save 1,000 items in history
 -- set list               " Show invisible characters
 -- set nobackup

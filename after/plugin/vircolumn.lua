@@ -7,8 +7,7 @@ function FixColorColumn()
       vim.opt.colorcolumn = "80"
   end
 end
-require("virt-column").setup {
-  char = "┃"
-}
-
 FixColorColumn()
+
+require("virt-column").setup { char = "┃" }
+

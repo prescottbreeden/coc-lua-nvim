@@ -1,7 +1,7 @@
+---@diagnostic disable: undefined-global
+
 vim.g.mapleader = " "
--- Normal Mode
 vim.keymap.set("n", "Q", "<nop>") -- don't ever press Q, it's the worst place in the universe
-vim.keymap.set({"n", "v"}, "<leader>pf", vim.lsp.buf.format) -- use lsp to format
 vim.keymap.set("n", "<C-n>", ":noh<cr>") -- clear search highlights
 vim.keymap.set("n", "J", "mzJ`z") -- J with cursor in place (prevent col jump)
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- keep cursor in middle when jumping down
@@ -13,39 +13,27 @@ vim.keymap.set("n", "<leader>c", ":nos botright 40vs ~/.config/nvim/cheats.vim<c
 vim.keymap.set("n", "<leader>vs", ":vs<cr>") -- create vertical split
 vim.keymap.set("n", "<leader>sp", ":sp<cr>") -- create horizontal split (mirror nerdtree)
 vim.keymap.set("n", "<C-w><C-w>", "<C-w>=") -- equalize window split sizes
-
--- file vim-fu
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end) -- source current file
-
--- Insert Mode
 vim.keymap.set("i", "jk", "<esc>")
-
--- Visual Mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move block up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move block down
-
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]]) -- don't lose register when pasting over word
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]) -- don't lose register when deleting
-
--- Switch between windows
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
-
--- Resize windows
-vim.keymap.set("n", "<C-left>", "<C-w><")
-vim.keymap.set("n", "<C-right>", "<C-w>>")
-vim.keymap.set("n", "<C-up>", "<C-w>+")
-vim.keymap.set("n", "<C-down>", "<C-w>-")
-
--- System Clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
-
--- terminal-fu
+vim.keymap.set("n", "<C-h>", "<C-w>h") -- Switch between windows
+vim.keymap.set("n", "<C-j>", "<C-w>j") -- Switch between windows
+vim.keymap.set("n", "<C-k>", "<C-w>k") -- Switch between windows
+vim.keymap.set("n", "<C-l>", "<C-w>l") -- Switch between windows
+vim.keymap.set("n", "<C-left>", "<C-w><") -- Resize windows
+vim.keymap.set("n", "<C-right>", "<C-w>>") -- Resize windows
+vim.keymap.set("n", "<C-up>", "<C-w>+") -- Resize windows
+vim.keymap.set("n", "<C-down>", "<C-w>-") -- Resize windows
 vim.keymap.set("n", "<leader>t", ":15sp +te<cr>") -- open terminal split
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>") -- return to normal mode
+
+-- smart deletion, dd
+-- It solves the issue, where you want to delete empty line, but dd will override you last yank.
+-- Code above will check if u are deleting empty line, if so - use black hole register.
+-- [src: https://www.reddit.com/r/neovim/comments/w0jzzv/comment/igfjx5y/?utm_source=share&utm_medium=web2x&context=3]
+local function smart_dd()
+	if vim.api.nvim_get_current_line():match("^%s*$") then
+		return "\"_dd"
+	else return "dd" end
+end
+vim.keymap.set("n", "dd", smart_dd, { noremap = true, expr = true })

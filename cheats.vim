@@ -55,12 +55,6 @@
 " - toggle tree:    <leader>,k
 " - go to current:   <leader>,m
 
-" trouble
-" - close trouble:            q or <esc>
-" - toggle trouble:           <leader>xx
-" - document diagnostics:     <leader>xd
-" - trouble quickfix:         <leader>xq
-
 " undotree
 " - open undotree:  <leader>u
 
