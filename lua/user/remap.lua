@@ -9,8 +9,6 @@ vim.keymap.set("n", "n", "nzzzv") -- keep cursor in middle when moving forwards 
 vim.keymap.set("n", "N", "Nzzzv") -- keep cursor in middle when moving backwards through search results
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- live search replace on current word
 vim.keymap.set("n", "<leader>?", ":nos botright 40vs ~/.config/nvim/cheats.vim<cr>") -- open cheat sheet
-vim.keymap.set("n", "<leader>vs", ":vs<cr>") -- create vertical split
-vim.keymap.set("n", "<leader>sp", ":sp<cr>") -- create horizontal split (mirror nerdtree)
 vim.keymap.set("n", "<C-w><C-w>", "<C-w>=") -- equalize window split sizes
 vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move block up

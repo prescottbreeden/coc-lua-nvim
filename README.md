@@ -61,7 +61,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ## Remaps & Funsies
 
-Leader key: `<spacebar>`
+Leader key: `,`
 
 | mode | description | command |
 |------|-------------|---------|
