@@ -1,7 +1,8 @@
 # Neovim Lua Config
 
-Non-CoC neovim IDE. General set and remaps are in `lua/user` and
-modifications or additional mappings for plugins in `after/plugin`.
+CoC Neovim IDE configured with Lua instead of vim scripts. Non-plugin-specific
+options and remaps are in `lua/user` and options, modifications, or additional
+mappings for plugins in `after/plugin/{plugin-name}`.
 
 Use `<leader>?` to open up the cheat sheet for list of current mappings.
 
