@@ -1,6 +1,6 @@
 # Neovim Lua Config
 
-Non-CoC neovim IDE. General set and remaps are in `lua/pb1337` and
+Non-CoC neovim IDE. General set and remaps are in `lua/user` and
 modifications or additional mappings for plugins in `after/plugin`.
 
 Use `<leader>?` to open up the cheat sheet for list of current mappings.
@@ -49,7 +49,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-- `nvim ~/.config/nvim/lua/pb1337/packer.lua`
+- `nvim ~/.config/nvim/lua/user/packer.lua`
 - `:so` give the file a quick shout out to source it
 - `:PackerSync` (re-run if there are any errors)
 - `:qa` and should be good to go
@@ -69,8 +69,8 @@ Leader key: `,`
 |normal|resize window|`<C-{left, right, up, down}>`|
 |normal|normalize windows| `<C-w><C-w>`|
 |normal|clear search highlight|`<C-n>`|
-|visual|move VB line up|`J`|
-|visual|move VB line down|`K`|
+|visual|move line up|`J`|
+|visual|move line down|`K`|
 |normal|open terminal|`<leader>t`|
 |normal|source buffer|`<leader><leader>`|
 |insert|alternate esc|`jk`|
@@ -84,15 +84,27 @@ Leader key: `,`
 | mode | description | command |
 |------|-------------|---------|
 |normal| goto definition | `gd` |
+|normal| goto type definition | `gy` |
+|normal| goto implementation | `gi` |
+|normal| goto references | `gr` |
 |normal| trigger hover | `K` |
+|normal| rename | `<leader>rn` |
 |normal| open code actions | `<leader>cc` |
-|normal| find references | `gr` |
-|normal| rename all | `<leader>rn` |
 |insert| show signature | `<C-h>` |
-|normal| open diagnostic float | `<leader>vd` |
+|insert| suggest options | `<C-space>` |
+|insert| next/prev option | `<C-n>/<C-p>` |
+|normal| open diagnostics | `<leader>x` |
 |normal| next diagnostic | `[d` |
 |normal| prev diagnostic | `]d` |
-|normal| workspace symbol | `<leader>vws` |
+|normal/visual| code action selected| `<leader>ca` |
+|normal| code action cursor| `<leader>cc` |
+|normal| code action whole buffer| `<leader>cG` |
+|normal| code action current buffer| `<leader>cg` |
+|normal| code action refactor| `<leader>re` |
+|normal| code action refactor selected | `<leader>rr` |
+|normal| quickfix | `<leader>qf` |
+|normal/visual| format file/selected | `<leader>pf` |
+
 
 ### Harpoon
 
@@ -116,8 +128,8 @@ Leader key: `,`
 
 | description | command |
 |-------------|---------|
-|toggle tree|`<leader>,k`|
-|goto current|`<leader>,m`|
+|toggle tree|`<leader>m,`|
+|goto current|`<leader>mf`|
 
 ### Undotree
 
@@ -135,4 +147,14 @@ Leader key: `,`
 
 | description | command |
 |-------------|---------|
+|open ChatGPT simple|`<leader>ai`|
+|apply custom persona|`<leader>aa`|
+|edit with instructions|`<leader>al`|
+|submit prompt|`<A-enter>`|
+|close|`<C-c>` or `:q` or `<esc>`|
+|cyles windows|`<Tab>` or mouse click|
+|select session|`<space>`|
+|rename session|`r`|
+|delete session|`d`|
+
 

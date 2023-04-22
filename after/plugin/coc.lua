@@ -70,10 +70,9 @@ keyset({ "n", "x", "v" }, "<leader>ca", "<Plug>(coc-codeaction-selected)", code_
 keyset("n", "<leader>cc", "<Plug>(coc-codeaction-cursor)", code_action_options) -- code actions at the cursor position.
 keyset("n", "<leader>cG", "<Plug>(coc-codeaction-source)", code_action_options) -- code actions affect whole buffer.
 keyset("n", "<leader>cg", "<Plug>(coc-codeaction)", code_action_options)        -- codeActions to the current buffer
-keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", code_action_options)       -- quickfix action on the current line.
+keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", code_action_options)       -- quickfix action on the current line.
 keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
-keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
-keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+keyset({"n", "x"}, "<leader>rr", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 
 -- formatting
 keyset("n", "<leader>pf", ":CocCommand prettier.formatFile<CR>", { silent = true, noremap = true })
