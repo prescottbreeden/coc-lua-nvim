@@ -2,61 +2,110 @@
 "       Cheat Sheet
 " ========================
 
-" --[ Lua Scripts ]-------
-" - FixColorColumn: `:lua FixColorColumn()` -- repaint colorcolumn for filetype
-" - FixColors:  `:lua FixColors()` -- remove bg from NormalFloat windows
+// NOTE: this is just the README.md by default
 
-" --[ Remaps ]------------
-" insert - alternate esc:          jk
-" normal - switch window:          <C-{h,j,k,l}>
-" normal - resize window:          <C-{left, right, up, down}>
-" normal - equalize window sizes:  <C-w><C-w>
-" normal - clear search highlight: <C-n>
-" visual - move VB line up:        J
-" visual - move VB line down:      K
-" normal - use buffer formatter:   <leader>pf
-" normal - yank to "+y register:   <leader>y (system register)
-" normal - yank to "+Y register:   <leader>Y (system register)
-" normal - persist register copy:  <leader>p
-" normal - persist register del:   <leader>d
-" normal - open vertical split:    <leader>vs
-" normal - open horizontal split:  <leader>sp
-" normal - open terminal in buff:  <leader>t
-" normal - source current file:    <leader><leader>
+## Lua Scripts
+FixColorColumn: `:lua FixColorColumn()` -- repaint colorcolumn for filetype
+FixColors:  `:lua FixColors()` -- remove bg from NormalFloat windows
 
-" --[ LSP ]---------------
-"normal - goto definition:        gd
-"normal - trigger hover:          K
-"normal - workspace symbol:       <leader>vws
-"normal - open diagnostic float:  <leader>vd
-"normal - next diagnostic:        [d
-"normal - prev diagnostic:        ]d
-"normal - open code actions:      <leader>vca
-"normal - find references:        <leader>vrr
-"normal - rename all:             <leader>vrn
-"insert - show signature:         <C-h>
+## Remaps & Funsies
 
-" --[ Plugins ]-----------
-" harpoon
-" - show/edit list: <leader>,e
-" - add:            <leader>a
-" - select:         <leader>{j,k,l,;}
+Leader key: `,`
 
-" telescope
-" - find files:     <leader>ff
-" - buffers:        <leader>fb
-" - delete buffer:  <C-x>
-" - git files:      <C-p>
-" - grep project:   <leader>fg
-" - fuzzy find:     <leader>,ff
-" - git commits:    :Telescope git_commits
+| mode   | description            | command                       |
+| ------ | ---------------------- | ----------------------------- |
+| normal | nav to window          | `<C-{h,j,k,l}>`               |
+| normal | resize window          | `<C-{left, right, up, down}>` |
+| normal | normalize windows      | `<C-w><C-w>`                  |
+| normal | clear search highlight | `<C-n>`                       |
+| visual | move line up           | `J`                           |
+| visual | move line down         | `K`                           |
+| normal | open terminal          | `<leader>t`                   |
+| normal | source buffer          | `<leader><leader>`            |
+| insert | alternate esc          | `jk`                          |
 
-" nerdtree
-" - toggle tree:    <leader>,k
-" - go to current:   <leader>,m
+---
 
-" undotree
-" - open undotree:  <leader>u
+## Packages
 
-" window-swap
-" - swap window in direction: <A-{h, j, k, l}>
+### CoC
+
+| mode          | description                   | command       |
+| ------------- | ----------------------------- | ------------- |
+| normal        | goto definition               | `gd`          |
+| normal        | goto type definition          | `gy`          |
+| normal        | goto implementation           | `gi`          |
+| normal        | goto references               | `gr`          |
+| normal        | trigger hover                 | `K`           |
+| normal        | rename                        | `<leader>rn`  |
+| normal        | open code actions             | `<leader>cc`  |
+| insert        | show signature                | `<C-h>`       |
+| insert        | suggest options               | `<C-space>`   |
+| insert        | next/prev option              | `<C-n>/<C-p>` |
+| normal        | open diagnostics              | `<leader>x`   |
+| normal        | next diagnostic               | `[d`          |
+| normal        | prev diagnostic               | `]d`          |
+| normal/visual | code action selected          | `<leader>ca`  |
+| normal        | code action cursor            | `<leader>cc`  |
+| normal        | code action whole buffer      | `<leader>cG`  |
+| normal        | code action current buffer    | `<leader>cg`  |
+| normal        | code action refactor          | `<leader>re`  |
+| normal        | code action refactor selected | `<leader>rr`  |
+| normal        | quickfix                      | `<leader>qf`  |
+| normal/visual | format file/selected          | `<leader>pf`  |
+
+### Harpoon
+
+| description    | command             |
+| -------------- | ------------------- |
+| show/edit list | `<leader>,e`        |
+| add            | `<leader>a`         |
+| select         | `<leader>{j,k,l,;}` |
+
+### Telescope
+
+| description                    | command       |
+| ------------------------------ | ------------- |
+| search files under git control | `<C-p>`       |
+| search all file names          | `<leader>ff`  |
+| search all buffers             | `<leader>fb`  |
+| dual grep all files            | `<leader>fg`  |
+| fuzzy find current buffer      | `<leader>,ff` |
+
+### Nerdtree
+
+| description  | command      |
+| ------------ | ------------ |
+| toggle tree  | `<leader>m,` |
+| goto current | `<leader>mf` |
+
+### Undotree
+
+| description   | command     |
+| ------------- | ----------- |
+| open undotree | `<leader>u` |
+
+### Window-swap
+
+| description              | command            |
+| ------------------------ | ------------------ |
+| swap window in direction | `<A-{h, j, k, l}>` |
+
+### ChatGPT
+
+| description              | command                    |
+| ------------------------ | -------------------------- |
+| open ChatGPT simple      | `<leader>ai`               |
+| apply custom persona     | `<leader>aa`               |
+| edit with instructions   | `<leader>al`               |
+| submit prompt            | `<A-enter>`                |
+| close                    | `<C-c>` or `:q` or `<esc>` |
+| toggle settings/sessions | `<C-o>` or mouse click     |
+| cyles windows            | `<Tab>` or mouse click     |
+| new session              | `<C-n>`                    |
+| select session           | `<space>`                  |
+| rename session           | `r`                        |
+| delete session           | `d`                        |
+| scroll up/down           | `<C-u>/<C-d>`              |
+| yank last                | `<C-y>`                    |
+| yank last code           | `<C-k>`                    |
