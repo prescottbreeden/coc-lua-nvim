@@ -3,17 +3,19 @@
 Non-CoC neovim IDE. General set and remaps are in `lua/pb1337` and
 modifications or additional mappings for plugins in `after/plugin`.
 
-Use `<leader>c` to open up the cheat sheet for list of current mappings.
+Use `<leader>?` to open up the cheat sheet for list of current mappings.
 
 ```
   packer.nvim - Total plugins: 25
  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ • ChatGPT.nvim
  • coc.nvim
  • friendly-snippets
  • harpoon
  • jellybeans
  • nerdtree
  • nerdtree-git-plugin
+ • nui.nvim
  • nvim-treesitter
  • nvim-web-devicons
  • packer.nvim
@@ -22,7 +24,6 @@ Use `<leader>c` to open up the cheat sheet for list of current mappings.
  • rust.vim
  • telescope.nvim
  • undotree
- • vim-ai
  • vim-airline
  • vim-airline-themes
  • vim-commentary
@@ -84,9 +85,9 @@ Leader key: `<spacebar>`
 |------|-------------|---------|
 |normal| goto definition | `gd` |
 |normal| trigger hover | `K` |
-|normal| open code actions | `<leader>vca` |
-|normal| find references | `<leader>vrr` |
-|normal| rename all | `<leader>vrn` |
+|normal| open code actions | `<leader>cc` |
+|normal| find references | `gr` |
+|normal| rename all | `<leader>rn` |
 |insert| show signature | `<C-h>` |
 |normal| open diagnostic float | `<leader>vd` |
 |normal| next diagnostic | `[d` |
@@ -130,10 +131,8 @@ Leader key: `<spacebar>`
 |-------------|---------|
 |swap window in direction|`<A-{h, j, k, l}>`|
 
-### OpenAI Chat
+### ChatGPT
 
 | description | command |
 |-------------|---------|
-|open chat|`<leader>ai`|
-|send question|`<leader>ai`|
 

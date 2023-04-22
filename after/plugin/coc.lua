@@ -66,11 +66,11 @@ keyset("i", "<cr>", "coc#pum#visible() ? coc#pum#confirm() : '<C-G>u<CR><C-R>=co
 
 -- code actions
 local code_action_options = { silent = true, nowait = true }
-keyset({ "n", "x", "v" }, "<leader>a", "<Plug>(coc-codeaction-selected)", code_action_options)
-keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", code_action_options) -- code actions at the cursor position.
-keyset("n", "<leader>aG", "<Plug>(coc-codeaction-source)", code_action_options) -- code actions affect whole buffer.
-keyset("n", "<leader>ag", "<Plug>(coc-codeaction)", code_action_options)        -- codeActions to the current buffer
-keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", code_action_options)       -- quickfix action on the current line.
+keyset({ "n", "x", "v" }, "<leader>ca", "<Plug>(coc-codeaction-selected)", code_action_options)
+keyset("n", "<leader>cc", "<Plug>(coc-codeaction-cursor)", code_action_options) -- code actions at the cursor position.
+keyset("n", "<leader>cG", "<Plug>(coc-codeaction-source)", code_action_options) -- code actions affect whole buffer.
+keyset("n", "<leader>cg", "<Plug>(coc-codeaction)", code_action_options)        -- codeActions to the current buffer
+keyset("n", "<leader>cf", "<Plug>(coc-fix-current)", code_action_options)       -- quickfix action on the current line.
 keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
 keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
 keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })

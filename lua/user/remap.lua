@@ -1,6 +1,5 @@
 ---@diagnostic disable: undefined-global
-
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 vim.keymap.set("n", "Q", "<nop>") -- don't ever press Q, it's the worst place in the universe
 vim.keymap.set("n", "<C-n>", ":noh<cr>") -- clear search highlights
 vim.keymap.set("n", "J", "mzJ`z") -- J with cursor in place (prevent col jump)
@@ -9,7 +8,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- keep cursor in middle when jumping up
 vim.keymap.set("n", "n", "nzzzv") -- keep cursor in middle when moving forwards through search results
 vim.keymap.set("n", "N", "Nzzzv") -- keep cursor in middle when moving backwards through search results
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- live search replace on current word
-vim.keymap.set("n", "<leader>c", ":nos botright 40vs ~/.config/nvim/cheats.vim<cr>") -- open cheat sheet
+vim.keymap.set("n", "<leader>?", ":nos botright 40vs ~/.config/nvim/cheats.vim<cr>") -- open cheat sheet
 vim.keymap.set("n", "<leader>vs", ":vs<cr>") -- create vertical split
 vim.keymap.set("n", "<leader>sp", ":sp<cr>") -- create horizontal split (mirror nerdtree)
 vim.keymap.set("n", "<C-w><C-w>", "<C-w>=") -- equalize window split sizes

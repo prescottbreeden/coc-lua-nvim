@@ -60,7 +60,19 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline-themes' -- pre-configured themes for airline
   use "lukas-reineke/virt-column.nvim" -- uses virtual text in place of hi
   use "wesQ3/vim-windowswap" -- allows for directional window swapping
-  use 'madox2/vim-ai' -- chatGPT integration
+
+  -- Chat Gipitie
+  use({
+    "jackMort/ChatGPT.nvim",
+      config = function()
+        require("chatgpt").setup()
+      end,
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
 
   -- pope essentials
   use 'tpope/vim-fugitive' -- git powa
