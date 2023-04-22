@@ -5,8 +5,8 @@
 // NOTE: this is just the README.md by default
 
 ## Lua Scripts
-FixColorColumn: `:lua FixColorColumn()` -- repaint colorcolumn for filetype
-FixColors:  `:lua FixColors()` -- remove bg from NormalFloat windows
+FixColors: `:lua FixColors()` -- remove bg from float windows
+FixColorColumn: `:lua FixColorColumn()` -- repaint color column for filetype
 
 ## Remaps & Funsies
 
@@ -18,10 +18,8 @@ Leader key: `,`
 | normal | resize window          | `<C-{left, right, up, down}>` |
 | normal | normalize windows      | `<C-w><C-w>`                  |
 | normal | clear search highlight | `<C-n>`                       |
-| visual | move line up           | `J`                           |
-| visual | move line down         | `K`                           |
+| visual | move line up/down      | `J`/`K`                       |
 | normal | open terminal          | `<leader>t`                   |
-| normal | source buffer          | `<leader><leader>`            |
 | insert | alternate esc          | `jk`                          |
 
 ---
@@ -30,37 +28,38 @@ Leader key: `,`
 
 ### CoC
 
-| mode          | description                   | command       |
-| ------------- | ----------------------------- | ------------- |
-| normal        | goto definition               | `gd`          |
-| normal        | goto type definition          | `gy`          |
-| normal        | goto implementation           | `gi`          |
-| normal        | goto references               | `gr`          |
-| normal        | trigger hover                 | `K`           |
-| normal        | rename                        | `<leader>rn`  |
-| normal        | open code actions             | `<leader>cc`  |
-| insert        | show signature                | `<C-h>`       |
-| insert        | suggest options               | `<C-space>`   |
-| insert        | next/prev option              | `<C-n>/<C-p>` |
-| normal        | open diagnostics              | `<leader>x`   |
-| normal        | next diagnostic               | `[d`          |
-| normal        | prev diagnostic               | `]d`          |
-| normal/visual | code action selected          | `<leader>ca`  |
-| normal        | code action cursor            | `<leader>cc`  |
-| normal        | code action whole buffer      | `<leader>cG`  |
-| normal        | code action current buffer    | `<leader>cg`  |
-| normal        | code action refactor          | `<leader>re`  |
-| normal        | code action refactor selected | `<leader>rr`  |
-| normal        | quickfix                      | `<leader>qf`  |
-| normal/visual | format file/selected          | `<leader>pf`  |
+| mode          | description                   | command         |
+| ------------- | ----------------------------- | --------------- |
+| normal        | goto definition               | `gd`            |
+| normal        | goto type definition          | `gy`            |
+| normal        | goto implementation           | `gi`            |
+| normal        | goto references               | `gr`            |
+| normal        | trigger hover                 | `K`             |
+| normal        | rename                        | `<leader>rn`    |
+| normal        | open code actions             | `<leader>cc`    |
+| insert        | suggest options               | `<C-space>`     |
+| insert        | next/prev option              | `<C-n>`/`<C-p>` |
+| normal        | open diagnostics              | `<leader>x`     |
+| normal        | next diagnostic               | `[d`            |
+| normal        | prev diagnostic               | `]d`            |
+| normal/visual | code action selected          | `<leader>ca`    |
+| normal        | code action cursor            | `<leader>cc`    |
+| normal        | code action whole buffer      | `<leader>cG`    |
+| normal        | code action current buffer    | `<leader>cg`    |
+| normal        | code action refactor          | `<leader>re`    |
+| normal        | code action refactor selected | `<leader>rr`    |
+| normal        | quickfix                      | `<leader>qf`    |
+| normal/visual | format file/selected          | `<leader>pf`    |
 
 ### Harpoon
 
+Harpoon menu can also be manually manipulated like any buffer
+
 | description    | command             |
 | -------------- | ------------------- |
-| show/edit list | `<leader>,e`        |
-| add            | `<leader>a`         |
-| select         | `<leader>{j,k,l,;}` |
+| show/edit list | `<leader>e`         |
+| add            | `<leader>h`         |
+| select         | `<leader>{1,2,3,4}` |
 
 ### Telescope
 
@@ -100,12 +99,12 @@ Leader key: `,`
 | edit with instructions   | `<leader>al`               |
 | submit prompt            | `<A-enter>`                |
 | close                    | `<C-c>` or `:q` or `<esc>` |
-| toggle settings/sessions | `<C-o>` or mouse click     |
+| toggle settings/sessions | `<C-o>`
 | cyles windows            | `<Tab>` or mouse click     |
 | new session              | `<C-n>`                    |
 | select session           | `<space>`                  |
 | rename session           | `r`                        |
 | delete session           | `d`                        |
-| scroll up/down           | `<C-u>/<C-d>`              |
+| scroll up/down           | `<C-u>`/`<C-d>`              |
 | yank last                | `<C-y>`                    |
 | yank last code           | `<C-k>`                    |
