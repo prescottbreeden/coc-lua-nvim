@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 require("chatgpt").setup(
 {
   yank_register = "+",

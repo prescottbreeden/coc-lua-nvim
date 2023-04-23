@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 vim.cmd('let NERDTreeShowHidden=1')
 vim.cmd('let g:deoplete#enable_at_startup=1')
 vim.cmd('autocmd StdinReadPre * let s:std_in=1')

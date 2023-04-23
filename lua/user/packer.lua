@@ -1,5 +1,6 @@
 ---@diagnostic disable: undefined-global
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+
+-- Autocommand that resyncs packer whenever you save the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -21,9 +22,6 @@ packer.init({
 		end,
 	},
 })
-
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'

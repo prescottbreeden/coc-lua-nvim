@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
 

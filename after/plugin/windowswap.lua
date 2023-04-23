@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 vim.g.windowswap_map_keys = 0 -- remove default <leader>ww
 
 vim.api.nvim_exec([[

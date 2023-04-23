@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 -- globals
 vim.g.nobackup = true -- some servers have issues with backup files
 vim.g.nowritebackip = true -- some servers have issues with backup files

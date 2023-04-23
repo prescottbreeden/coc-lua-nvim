@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
