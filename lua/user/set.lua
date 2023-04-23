@@ -36,7 +36,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-
+-- not carried over from previous vimrc
 -- set autoindent         " copy indent from current line, over to the new line
 -- set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 -- set foldmethod=indent

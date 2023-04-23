@@ -126,7 +126,7 @@ Harpoon menu can also be manually manipulated like any buffer
 
 | description                    | command       |
 | ------------------------------ | ------------- |
-| search files under git control | `<C-p>`       |
+| search files under git control | `<leader>fp`  |
 | search all file names          | `<leader>ff`  |
 | search all buffers             | `<leader>fb`  |
 | dual grep all files            | `<leader>fg`  |
@@ -160,12 +160,12 @@ Harpoon menu can also be manually manipulated like any buffer
 | edit with instructions   | `<leader>al`               |
 | submit prompt            | `<A-enter>`                |
 | close                    | `<C-c>` or `:q` or `<esc>` |
-| toggle settings/sessions | `<C-o>`
+| toggle settings/sessions | `<C-o>`                    |
 | cyles windows            | `<Tab>` or mouse click     |
 | new session              | `<C-n>`                    |
 | select session           | `<space>`                  |
 | rename session           | `r`                        |
 | delete session           | `d`                        |
-| scroll up/down           | `<C-u>`/`<C-d>`              |
+| scroll up/down           | `<C-u>`/`<C-d>`            |
 | yank last                | `<C-y>`                    |
 | yank last code           | `<C-k>`                    |
